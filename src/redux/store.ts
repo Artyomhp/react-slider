@@ -1,5 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { useDispatch } from "react-redux";
+import slider from "./slider/slice";
 
-export const store = configureStore({
-  reducer: {},
+const store = configureStore({
+  reducer: {
+    slider,
+  },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch = () => useDispatch<AppDispatch>();
+
+export default store;

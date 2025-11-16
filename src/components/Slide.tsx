@@ -1,18 +1,15 @@
 import React from "react";
+import type { SlideProps } from "../redux/slider/types";
+import "../scss/slider.scss";
 
-interface Item {
-  label: string;
-  description: string;
-  img: string;
-}
-
-const Slide: React.FC<Item> = ({ label, description, img }) => {
+const Slide: React.FC<SlideProps> = ({ label, description, img }) => {
   return (
-    <li>
+    <div className="slide">
       <div>{label}</div>
       <div>{description}</div>
+
       <img src={`./src/assets/images/categories/${img}`} alt="" />
-    </li>
+    </div>
   );
 };
 
