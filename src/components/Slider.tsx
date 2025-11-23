@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import Arrows from "./Arrows";
-import Dots from "./Dots";
+// import Dots from "./Dots";
 import Slide from "./Slide";
 import type { RootState } from "../redux/store";
 import { useAppDispatch } from "../redux/store";
@@ -19,7 +19,7 @@ const Slider: React.FC = () => {
   });
 
   return (
-    <div className="slider">
+    <div className="overflow-hidden relative ">
       <Arrows />
       {/* <ul className="slide__list">
         {items.map((item: SlideProps) => (
@@ -32,7 +32,7 @@ const Slider: React.FC = () => {
         ))}
       </ul> */}
       <SlidesList />
-      <Dots />
+      {/* <Dots /> */}
     </div>
   );
 };

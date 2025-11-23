@@ -13,8 +13,8 @@ const sliderSlice = createSlice({
   reducers: {
     changeSlide: (state, action) => {
       const direction = action.payload;
-      const length = state.items.length;
-      state.currentSlide = (state.currentSlide + direction + length) % length;
+      // const length = state.items.length / 3;
+      state.currentSlide = (state.currentSlide + direction + 3) % 3;
     },
     goToSlide: (state, action) => {
       state.currentSlide = action.payload & state.items.length;
@@ -27,5 +27,5 @@ const sliderSlice = createSlice({
     });
   },
 });
-
+export const { changeSlide, goToSlide } = sliderSlice.actions;
 export default sliderSlice.reducer;

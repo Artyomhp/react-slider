@@ -37,7 +37,7 @@ const SlidesList = () => {
   return (
     <>
       <ul
-        className="slides-list"
+        className="slides-list grid auto-cols-[calc(100%/2)] grid-flow-col  flex-nowrap"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {items.map((item: SlideProps) => (

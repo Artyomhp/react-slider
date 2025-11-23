@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-sans: 'DM Sans', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-noto: 'Noto Sans', sans-serif;
+    --color-gray-text: rgba(115, 129, 142, 1);
+    --color-btn-tg: rgb(87, 191, 193);
+    --color-border: rgba(209, 213, 219, 1);
+}
